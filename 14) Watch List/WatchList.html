@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Watch List</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="WatchListController.js"></script>
+</head>
+<body>
+<div ng-app="watch" ng-controller="WatchController">
+    <b>Watch list</b>
+    <br>
+    <br>
+    <div>
+        <input ng-model="morningGreeting">
+        <input ng-model="afternoonGreeting">
+    </div>
+    <br>
+
+    {{nightGreeting}}
+
+    <ul>
+        <li ng-repeat="og in otherGreetings">
+            {{og}}
+        </li>
+    </ul>
+
+    <div>
+        <input ng-model="customGreeting">
+        <br>
+        <br>
+        {{customGreetingCounter}}
+    </div>
+
+</div></body>
+</html>

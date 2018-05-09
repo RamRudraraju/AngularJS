@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="candidates">
+<head>
+    <title>Template Expanding Directives</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="TemplateIsolateScopeDirective.js"></script>
+</head>
+<body>
+<div ng-controller="CandidateController">
+    <presidential-candidate candidate-info="donald"></presidential-candidate>  
+    <!-- candidate-info : It is Used to Indicate which candidate info we are interrestedin                                   -->
+    <br>
+    <presidential-candidate candidate-info="hillary"></presidential-candidate>
+</div>
+</body>
+</html>
+
