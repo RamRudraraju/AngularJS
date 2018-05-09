@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Form</title>
+    <script src="../../angular-1.5.8/angular.js"></script>
+    <script src="SimpleFormController.js"></script>
+</head>
+<body>
+<style type="text/css">
+    .form .ng-invalid.ng-touched {
+        background-color: red;
+    }
+
+    .form .ng-valid.ng-touched {
+        background-color: green;
+    }
+
+    .form .ng-pristine {
+        background-color: blue;
+    }
+
+    .form .ng-dirty {
+        background-color: grey;
+    }
+</style>
+
+<div ng-app="simpleForm" ng-controller="SimpleFormController">
+    <form novalidate  class="form">
+        Name: <input type="text" ng-model="client.name" /><br>
+        Contact E-mail: <input type="email" ng-model="client.email" /><br>
+
+        Bedrooms:
+        <input type="radio" ng-model="client.bedroomCount" value="1" />1+
+        <input type="radio" ng-model="client.bedroomCount" value="2" />2+
+        <input type="radio" ng-model="client.bedroomCount" value="3" />3+ <br>
+
+        Property Type:
+        <input type="checkbox" ng-model="client.condo"
+               ng-true-value="'yes'" ng-false-value="'no'" /> Condo
+        <input type="checkbox" ng-model="client.townhome"
+               ng-true-value="'yes'" ng-false-value="'no'" /> Townhome
+        <input type="checkbox" ng-model="client.house"
+               ng-true-value="'yes'" ng-false-value="'no'" /> House <br>
+
+        <input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" ng-click="update(client)" value="Save" />
+    </form>
+</div>
+</body>
+</html>

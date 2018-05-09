@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Filter Filters</title>
+    <script src="../../angular-1.5.8/angular.js"></script>
+    <script src="FilterFilter.js"></script>
+</head>
+<body>
+<div ng-app="filters" ng-controller="FiltersController">
+    <label>Search: <input ng-model="searchText"></label>
+    <table>
+        <tr><th>Name</th><th>Location</th></tr>
+        <tr ng-repeat="book in books | filter:searchText">
+            <td>{{book.name}}</td>
+            <td>{{book.location}}</td>
+        </tr>
+    </table>
+    <hr>
+
+    <label>Any: <input ng-model="search.$"></label> <br>
+    <label>Name only <input ng-model="search.name"></label><br>
+    <label>Equality <input type="checkbox" ng-model="strict"></label><br>
+
+    <table>
+        <tr><th>Name</th><th>Location</th></tr>
+        <tr ng-repeat="book in books | filter : search : strict">
+            <td>{{book.name}}</td>
+            <td>{{book.location}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

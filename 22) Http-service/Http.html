@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Http Service</title>
+    <script src="../../angular-1.5.8/angular.js"></script>
+    <script src="HttpController.js"></script>
+    <style>
+        table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div ng-app="http">
+    <div ng-controller="HttpController">
+        Data: {{data}} <br>
+        Headers: {{headers}} <br>
+        Status: {{status}} <br>
+        Status Text: {{statusText}} <br>
+        Config: {{config | json}} <br>
+        <br><hr><br>
+        Data: {{errordata}} <br>
+        Headers: {{errorheaders}} <br>
+        Status: {{errorstatus}} <br>
+        Status Text: {{errorstatusText}} <br>
+        Config: {{errorconfig | json}} <br>
+        <br><hr><br>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
+
+            <tr ng-repeat = "teacher in teachers">
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.class}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

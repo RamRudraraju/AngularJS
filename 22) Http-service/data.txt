@@ -1,0 +1,26 @@
+[
+  {
+    "name" : "Bathsheba Babbling",
+    "class" : "Ancient Runes"
+  },
+  {
+    "name" : "Cuthbert Binns",
+    "class" : "History Of Magic"
+  },
+  {
+    "name" : "Charity Babbage",
+    "class" : "Muggle Studies"
+  },
+  {
+    "name" : "Filius Flitwick",
+    "class" : "Charms"
+  },
+  {
+    "name" : "Firenze",
+    "class" : "Divination"
+  },
+  {
+    "name" : "Aurora Sinistra",
+    "class" : "Astronomy"
+  }
+]

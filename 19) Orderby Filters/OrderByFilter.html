@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order By Sort By Filters</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="OrderByFilterController.js"></script>
+</head>
+<body>
+<div ng-app="filters" ng-controller="BuiltInFiltersController">
+    <h4>Order By</h4>
+    <h5>Marks Ascending</h5>
+    {{examReport | orderBy : 'marks'}}
+    <br>
+    <h5>Marks Descending</h5>
+    {{examReport | orderBy : '-marks'}}
+    <br>
+    {{examReport | orderBy : 'marks' : true}}
+    <br>
+    <br>
+    <br>
+
+    <h3>Marks Table - Sort By Name</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr ng-repeat="report in examReport | orderBy:'name'">
+            <td>{{report.name}}</td>
+            <td>{{report.marks}}</td>
+        </tr>
+    </table>
+
+    <h3>Marks Table - Reverse Sort By Marks</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr ng-repeat="report in sortedExamReport">
+            <td>{{report.name}}</td>
+            <td>{{report.marks}}</td>
+        </tr>
+    </table>
+
+    <h3>Sorted Pairs</h3>
+    <table>
+        <tr>
+            <th>First</th>
+            <th>Second</th>
+        </tr>
+        <tr ng-repeat="pair in pairList | orderBy : 'second' : false : pairComparator">
+            <td>{{pair.first}}</td>
+            <td>{{pair.second}}</td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

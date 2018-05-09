@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Built-in Filters</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="BuiltInFiltersController.js"></script>
+</head>
+<body>
+<div ng-app="filters" ng-controller="BuiltInFiltersController">
+    <h4>Currency</h4>
+    {{1000.39 | currency : 'SGD$ ' : 1}}
+
+    <h4>Number</h4>
+    {{100 | number}}
+    <br>
+    {{100.12345 | number:3}}
+    <br>
+    {{100.12345 | number:2}}
+    <br>
+    {{100.12345 | number:0}}
+
+    <h4>Date</h4>
+    {{1398723823006 | date}}
+    <br>
+    {{'2014-04-25' | date : 'longDate'}}
+    <br>
+    {{'2014-04-25' | date : 'fullDate'}}
+    <br>
+    {{'2014-04-25' | date : "MM/dd/yyyy 'at' h:mma"}}
+    <br>
+    {{'2014-04-25' | date : 'yy-MM-dd HH:mm:ss Z'}}
+    <br>
+
+    <h4>Json</h4>
+    {{jsObject | json}}
+    <br>
+
+    <h4>Lowercase And Uppercase</h4>
+    {{'HARRY POTTER And The Deathly HALLOWS' | lowercase}}
+    <br>
+    {{'HARRY POTTER And The Deathly HALLOWS' | uppercase}}
+    <br>
+
+    <h4>Limit To</h4>
+    {{numbers | limitTo : 3}}
+    <br>
+    {{numbers | limitTo : 3 : 3}}
+    <br>
+    {{letters | limitTo : 5}}
+    <br>
+    {{letters | limitTo : 5 : 1}}
+    <br>
+
+</div>
+</body>
+</html>

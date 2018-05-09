@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angular Libraries</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="AngularLibraries.js"></script>
+</head>
+<body>
+<div ng-app="applyFunction" ng-controller="ApplyFunctionController">
+    <h3>
+       Message update on timeout
+    </h3>
+    <div>
+        {{message}}
+    </div>
+   <!--  Usage of Angular Libraries Insterd of nATIVE fUNCTIONALITIES
+             ng-click & $timeout.
+   -->
+    <h3>
+        Message update on button click
+    </h3>
+    <div>
+        {{anotherMessage}}
+        <br>
+        <button ng-click="clickMe()"> Update message </button>
+    </div>
+
+</div></body>
+</html>

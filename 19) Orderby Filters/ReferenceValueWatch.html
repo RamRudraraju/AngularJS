@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exploring Watch</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="ReferenceValueWatchController.js"></script>
+</head>
+<body>
+<div ng-app="watch" ng-controller="ExploringWatchController">
+    <h4>Reference Value Watch</h4>
+    <div>
+        <input ng-model="simpleWatch">
+        <br>
+        {{simpleWatchCounter}}
+    </div>
+
+    <h4>Value Changed Watch</h4>
+    <div>
+        <input ng-model="valueChangedWatch">
+        <br>
+        {{valueChangedWatchCounter}}
+    </div>
+    <br>
+
+    <h4>Object Reference Watch</h4>
+    <div>
+        <input ng-model="objectReferenceWatch.name">
+        <br>
+        {{objectReferenceWatchCounter}}
+    </div>
+    <br>
+
+    <h4>Object Value Watch</h4>
+    <div>
+        <input ng-model="objectValueWatch.name">
+        <br>
+        {{objectValueWatchCounter}}
+    </div>
+    <br>
+
+    <h4>Collection Watch</h4>
+    <div>
+        <input ng-model="collectionWatch">
+        <br>
+        {{collectionWatchCounter}}
+    </div>
+    <br>
+</div></body>
+</html>
