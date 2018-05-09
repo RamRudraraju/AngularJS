@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scopeInheritance">
+<head>
+    <title>Scope Inheritance</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="ScopeInheritanceController.js"></script>
+    <style>
+        .outline {
+            padding: 8px;
+            margin: 8px;
+            border: solid 2px darkred;
+        }
+    </style>
+</head>
+<body>
+<div class="outline" ng-controller="GreatGrandfatherController">
+    <b>Hello {{name}}!</b>
+    <br>
+    <b>Hello {{anotherName}}!</b>
+    <br>
+    <b>Hello {{sameName}}!</b>
+
+    <div class="outline" ng-controller="GrandfatherController">
+        <b>Hello {{name}}!</b>
+
+        <div class="outline" ng-controller="FatherController">
+            <b>Hello {{name}}!</b>
+
+            <div class="outline" ng-controller="Child">
+                <b>Hello {{name}}!</b>
+                <br>
+                <b>Hello {{anotherName}}!</b>
+                <br>
+                <b>Hello {{sameName}}!</b>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

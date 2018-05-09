@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello State And Behavior</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="StateAndBehaviorController.js"></script>
+</head>
+<body>
+<div ng-app="hello" ng-controller="HelloController as hello">
+  
+    <b>Hello {{entity}}!</b> <!-- By the Use of $scope, we can Use te Variables in Controller with out Refering to it. -->
+    <br>
+    <br>
+    <div>
+        <button ng-click="generateRandomEntity()">  <!-- Direct Use of Functions -->
+            Generate random entity for greeting!
+        </button>
+    </div>
+
+    <div>
+        <button ng-click="generateSpecificEntity('Rama')"> <!-- Functions Which Takes Scope as Input Arguments -->
+            Greet Rama!
+        </button>
+    </div>
+    <div>
+        <button ng-click="generateSpecificEntity('Krishna')">
+            Greet Krishna!
+        </button>
+    </div>
+
+    <div>
+        Or someone else? <input ng-model="customPerson">    <!-- Custom Value Function -->
+        <button ng-click="generateSpecificEntity(customPerson)">
+            Greet!
+        </button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A Simple Service</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="SimpleService.js"></script>
+    <script src="SimpleController.js"></script>
+</head>
+<body>
+<div ng-app="calculator" ng-controller="CalcController as calc">
+    <b>Simple Calculator:</b>
+    <div>
+        Enter the 1st: <input type="number" ng-model="calc.num1">
+    </div>
+    <div>
+        Enter the 2nd: <input type="number" ng-model="calc.num2">
+    </div>
+    <div>
+        <b>Add:</b> {{calc.add()}}
+    </div>
+    <div>
+        <b>Multiply:</b> {{calc.multiply()}}
+    </div>
+    <div>
+        <b>Divide:</b> {{calc.divide()}}
+    </div>
+    <div>
+        <b>Subtract:</b> {{calc.subtract()}}
+    </div>
+</div></body>
+</html>

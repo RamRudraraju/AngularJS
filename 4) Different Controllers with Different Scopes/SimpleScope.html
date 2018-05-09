@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="simpleScope">
+<head>
+    <title>Simple Scope</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="SimpleScopeController.js"></script>
+</head>
+<body>
+<div ng-controller="SimpleScopeController1 as ss1">
+    <h3>Controller greeting</h3>
+    <b>Hello {{ss1.person}} declared on the controller!</b>
+    <button ng-click="ss1.randomPersonOnController()">
+        Generate random name!
+    </button>
+    <br>
+    <br>
+    <h3>Scope greeting</h3>
+    <b>Hello {{person}} declared on the scope!</b>
+    <button ng-click="randomPersonOnScope()">
+        Generate random name!
+    </button>
+    <br>
+    <br>
+</div>
+<div>
+    -----------------------------------------------------
+</div>
+<div ng-controller="SimpleScopeController2 as ss2">
+    <h3>Controller greeting</h3>
+    <b>Hello {{ss2.person}} declared on the controller!</b>
+    <button ng-click="ss2.randomPersonOnController()">
+        Generate random name!
+    </button>
+    <br>
+    <br>
+    <h3>Scope greeting</h3>
+    <b>Hello {{person}} declared on the scope!</b>
+    <button ng-click="randomPersonOnScope()">
+        Generate random name!
+    </button>
+    <br>
+    <br>
+</div>
+</body>
+</html>

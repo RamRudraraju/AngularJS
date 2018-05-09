@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="emitBroadcast">
+
+<head>
+    <title>Emit And Broadcast</title>
+    <script src="../../angular-1.6.9/angular.js"></script>
+    <script src="EmitBroadcastController.js"></script>
+    <style>
+        .outline {
+            padding: 8px;
+            margin: 8px;
+            border: solid 2px darkslategrey;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<div class="outline" ng-controller="EmitBroadcastController">
+    <br>
+    Parent scope count: <span class="highlight"> {{count}} </span> (Emit)
+    <div class="outline" ng-controller="EmitBroadcastController">
+        <button ng-click="$emit('ClickEvent')"> Emit 'ClickEvent' </button>
+        <button ng-click="$broadcast('ClickEvent')"> Broadcast 'ClickEvent' </button>
+        <br>
+        <br>
+        Current scope count: <span class="highlight"> {{count}} </span> (Emit and Broadcast)
+        <br>
+        <div class="outline">
+            <ul>
+                <li ng-repeat="item in [1, 2]" ng-controller="EmitBroadcastController">
+                    Child scope count: <span class="highlight"> {{count}} </span> (Broadcast)
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
